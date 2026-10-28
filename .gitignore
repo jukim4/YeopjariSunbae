@@ -1,0 +1,28 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# 비밀 정보
+secrets.properties
+.env
+*.env
+
+# 서명 키 (APK 서명용, 절대 올리면 안 됨)
+*.jks
+*.keystore
+keystore.properties
+
+# 로그
+*.log

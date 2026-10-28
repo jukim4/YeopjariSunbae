@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.type.automotive"
+        android:required="true" /> <!-- 브레이크·기어 -->
+    <uses-permission android:name="pleos.car.permission.CAR_DRIVE" /> <!-- 방향지시등 -->
+    <uses-permission android:name="pleos.car.permission.CAR_LIGHTS" /> <!-- 차량 속도 -->
+    <uses-permission android:name="pleos.car.permission.CAR_SPEED" />
+    <uses-permission android:name="android.car.permission.CAR_SPEED" /> <!-- 회전 목록·목적지 -->
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE" />
+    <uses-permission android:name="android.car.permission.CAR_POWERTRAIN" /> <!-- 기어 (AAOS GEAR_SELECTION) -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.YeopjariSunbae">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.YeopjariSunbae">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+            <!-- 주행 중에도 화면이 가려지지 않게 -->
+            <meta-data android:name="distractionOptimized" android:value="true" />
+        </activity>
+    </application>
+
+</manifest>
